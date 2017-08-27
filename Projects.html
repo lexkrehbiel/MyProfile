@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="Projects.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="portfolio.css">
+  <script type="text/javascript">
+    $(function(){
+      $("#menubar_container").load("MenuBar.html");
+    });
+  </script>
+</head>
+
+<body ng-app="Portfolio" ng-controller="Projects">
+
+  <div id="menubar_container" class="menubar_container"></div>
+
+  <div class="content-area"><h1> Projects </h1></div>
+
+  <div class="row content-area" ng-repeat="proj in projects">
+    <div class="col-md-3 col-sm-3 col-lg-3">
+      <img src="{{'images/'+proj.img}}" alt="Project Photo">
+    </div>
+    <div class="col-md-9 col-sm-9 col-lg-9">
+      <h3> {{proj.name}} </h3>
+      <p ng-repeat="par in proj.desc"> {{par}} </p>
+      <p ng-show="proj.link"> See the final product <a href="{{proj.link}}">here</a>.</p>
+    </div>
+  </div>
+
+  <div class="content-area row" >
+    Check out my <a href="https://github.com/lexkrehbiel">Github</a> to see what else I've been up to on lately!
+  </div>
+
+
+
+</body>
+
+
+</html>

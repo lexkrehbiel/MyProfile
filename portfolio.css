@@ -1,0 +1,35 @@
+.portfolio {
+  font-family: sans-serif;
+}
+.menubar {
+
+  background-color: rgb(17, 85, 205);
+  padding: 0px;
+}
+
+.menubar button {
+
+  color: white;
+  background-color: inherit;
+  border: 0px;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menubar button:hover {
+  background-color: rgb(13, 64, 154);
+}
+
+.content-area img {
+  width:100%;
+}
+
+.content-area {
+  margin: 20px;
+  padding: 15px;
+}
+
+.content-included {
+  margin: 10px;
+}

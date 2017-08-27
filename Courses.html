@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="Courses.js"></script>
+  <script src="Projects.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="portfolio.css">
+  <script type="text/javascript">
+    $(function(){
+      $("#menubar_container").load("MenuBar.html");
+    });
+  </script>
+</head>
+
+<body ng-app="Portfolio" ng-controller="Courses">
+
+  <div id="menubar_container" class="menubar_container"></div>
+
+  <div class="content-area" style="margin-bottom:0px; padding-bottom:10px"><h1 style="margin-bottom:0px; padding-bottom:0px"> Coursework </h1></div>
+
+  <h5 class="content-area" style="margin-top:0px; padding-top: 0px">
+    Overall GPA: 3.91
+  </h5>
+
+
+  <div class="content-area" style="margin-top:0px; padding-top: 0px">
+    <h4 class="content-area" style="margin:5px 0px; padding: 0px; margin-left:0px">
+      Computer Courses
+    </h4>
+    For my complete grades, see my <a onclick="javascript:document.location='Transcript.html'">unofficial transcript</a>.
+    <table class="table table-striped" style="margin-top:15px">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Technologies and Languages</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="course in courses">
+          <td>{{course.code}}</td>
+          <td>
+            <div>{{course.title}}</div>
+            <div ng-show="course.TA" style="font-weight:bold">I later TA'd this course!</div>
+          </td>
+          <td>{{course.tech}}</td>
+          <td>{{course.grade}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+
+</html>
