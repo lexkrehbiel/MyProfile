@@ -1,9 +1,9 @@
 var app = angular.module('Portfolio', []);
 
-if(Projects){
+if(typeof Projects !== 'undefined'){
   app.controller('Projects', Projects);
 }
 
-if(Courses){
+if(typeof Courses !== 'undefined'){
   app.controller('Courses', Courses);
 }
