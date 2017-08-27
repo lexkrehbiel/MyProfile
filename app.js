@@ -1,5 +1,9 @@
-var app = angular.module('Portfolio', [])
+var app = angular.module('Portfolio', []);
 
-.controller('Projects', Projects)
+if(Projects){
+  app.controller('Projects', Projects);
+}
 
-.controller('Courses', Courses);
+if(Courses){
+  app.controller('Courses', Courses);
+}
