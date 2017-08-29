@@ -9,7 +9,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <script src="Projects.js"></script>
+  <!-- Google charts API  -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- load the JS from the piechart page -->
+  <script type="text/javascript" src="Adventures.js"></script>
   <script src="app.js"></script>
   <link rel="stylesheet" href="portfolio.css">
   <script type="text/javascript">
@@ -19,7 +22,7 @@
   </script>
 </head>
 
-<body ng-app="Portfolio" ng-controller="Courses">
+<body ng-app="Portfolio">
 
   <div id="menubar_container" class="menubar_container"></div>
 
@@ -28,7 +31,9 @@
   </div>
 
   <h5 class="content-area" style="margin-top:0px; padding-top: 0px">
-    I'm still working on this one - check back later!
+    I love to travel! Here's a map of some of the places I've been.
+    Hover over anything you're curious about for more details.
+    <div id="map" style=""></div>
   </h5>
 
 

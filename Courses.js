@@ -4,7 +4,7 @@ function Courses($scope) {
     {
       title: 'Dialogue Systems',
       code: 'CIS4930',
-      tech: 'Miscellaneous',
+      tech: 'Python',
       grade: 'Currently Enrolled'
     },
     {
@@ -89,6 +89,4 @@ function Courses($scope) {
       grade: 'A'
     }
   ]
-
-  console.log($scope.courses);
 }

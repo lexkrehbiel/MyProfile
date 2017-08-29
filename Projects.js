@@ -18,5 +18,5 @@ function Projects($scope) {
       desc: ['FloorTime allows users to analyze the amount of time for which each speaker speaks in an audio recording.'
           +' The application takes in audio data, performs speaker diarization, and then shows the results on graphs.',
           'This is my senior project! I am working on this with one other UF student. As of 2017, the project is still in progress.']
-    }]
+    }];
 }
