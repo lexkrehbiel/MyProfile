@@ -10,7 +10,7 @@ function drawMarkersMap() {
 
   var rawdata = [
     {
-      city: 'Lake Tahoe, Utah',
+      city: 'Lake Tahoe, CA',
       days: 4,
       year: 1997
     },
