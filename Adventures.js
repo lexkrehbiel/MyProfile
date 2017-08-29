@@ -2,13 +2,124 @@ google.charts.load('current', {
    'packages': ['geochart'],
    // Note: you will need to get a mapsApiKey for your project.
    // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-   'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+   'mapsApiKey': 'AIzaSyAdq7UZiiy5hgj4YBzOLF170yhrUbOo5oc'
  });
- google.charts.setOnLoadCallback(drawMarkersMap);
+google.charts.setOnLoadCallback(drawMarkersMap);
 
 function drawMarkersMap() {
 
   var rawdata = [
+    {
+      city: 'Lake Tahoe, Utah',
+      days: 4,
+      year: 1997
+    },
+    {
+      city: 'Munich, Germany',
+      days: 2,
+      year: 2005
+    },
+    {
+      city: 'Wurzburg, Germany',
+      days: 2,
+      year: 2005
+    },
+    {
+      city: 'Paris, France',
+      days: 4,
+      year: 2005
+    },
+    {
+      city: 'London, England',
+      days: 4,
+      year: 2005
+    },
+    {
+      city: 'Monaco',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Algulhas, Western Cape',
+      days: 1,
+      year: 2017,
+      img: "southernpoint.jpg"
+    },
+    {
+      city: 'Nice, France',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Santorini, Greece',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Rome, Italy',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Florence, Italy',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Athens, Greece',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Mykonos, Greece',
+      days: 1,
+      year: 2009
+    },
+    {
+      city: 'Cozumel, Mexico',
+      days: 1,
+      year: 2012
+    },
+    {
+      city: 'Panama Canal',
+      days: 3,
+      year: 2001
+    },
+    {
+      city: 'St. John',
+      days: 1,
+      year: 2001
+    },
+    {
+      city: 'St. Thomas',
+      days: 1,
+      year: 2001
+    },
+    {
+      city: 'Turks & Caikos',
+      days: 1,
+      year: 2012
+    },
+    {
+      city: 'Labadee, Haiti',
+      days: 1,
+      year: 2012
+    },
+    {
+      city: 'Grand Caman',
+      days: 1,
+      year: 2012
+    },
+    {
+      city: 'St. Martin',
+      days: 1,
+      year: 2012
+    },
+    {
+      city: 'Hiedelberg, Germany',
+      days: 1,
+      year: 2015
+    },
     {
       city: 'Antananarivo, Madagascar',
       days: 6,
@@ -19,7 +130,7 @@ function drawMarkersMap() {
       city: 'Cape Town, South Africa',
       days: 4,
       year: 2017,
-      img: "cpt.JPG"
+      img: "cpt.jpg"
     },
     {
       city: 'New York City',
@@ -29,54 +140,52 @@ function drawMarkersMap() {
       desc: "I interned at Bloomberg in Manhattan the summer after my Junior year in college."
     },
     {
-      city: 'Istanbul',
+      city: 'Istanbul, Turkey',
       days: 1,
       year: 2017
     },
     {
-      city: 'Seoul',
+      city: 'Seoul, South Korea',
       days: 30,
       year: 2015,
       img: "sk.jpg",
       desc: "I studied abroad in Seoul at Hanyang University."
     },
     {
-      city: 'Satellite Beach',
-      days: 18,
+      city: 'Satellite Beach, FL',
       year: 1995,
-      inYears: true,
+      years: 18,
       img: "stlbch.JPG",
       desc: "I grew up in Satellite Beach, FL."
     },
     {
-      city: 'Weston',
+      city: 'Weston, FL',
       days: 90,
       year: 2016,
       img: "weston.jpg",
       desc: "I interned at Ultimate Software in Weston, FL the summer after my Sophomore year in college."
     },
     {
-      city: 'Nassau',
+      city: 'Nassau, Bahamas',
       days: 1,
       year: 2016,
     },
     {
-      city: 'Key Largo',
+      city: 'Key Largo, FL',
       days: 4,
       year: 2016,
       img: "keylargo.jpg"
     },
     {
-      city: 'Key West',
+      city: 'Key West, FL',
       days: 4,
       year: 2016,
       img: "keywest.jpg"
     },
     {
       city: 'Gainesville, FL',
-      days: 3,
       year: 2014,
-      inYears: true,
+      years: 3,
       img: "uf.jpg",
       desc: "I did my undergrad at the University of Florida in Gainesville, Florida."
     },
@@ -86,19 +195,14 @@ function drawMarkersMap() {
       year: 2014
     },
     {
-      city: 'Juneau',
+      city: 'Juneau, Alaska',
       days: 2,
       year: 2014
     },
     {
-      city: 'Skagway',
+      city: 'Skagway, Alaska',
       days: 2,
       year: 2014
-    },
-    {
-      city: 'Panama City',
-      days: 7,
-      year: 2000
     },
     {
       city: 'Cologne, Germany',
@@ -106,10 +210,22 @@ function drawMarkersMap() {
       year: 2015
     },
     {
-      city: 'Strausbourg',
+      city: 'Strasbourg, Germany',
       days: 1,
       year: 2015,
       img: 'strausbourg.jpg'
+    },
+    {
+      city: 'St. Petersburg, FL',
+      days: 1,
+      year: 2015,
+      img: 'stpete.jpg'
+    },
+    {
+      city: 'Koblenz, Germany',
+      days: 1,
+      year: 2015,
+      img: 'koblenz.jpg'
     },
     {
       city: 'Amsterdam',
@@ -118,34 +234,14 @@ function drawMarkersMap() {
       img: 'amsterdam.jpg'
     },
     {
-      city: 'Rome',
-      days: 1,
-      year: 2004
-    },
-    {
-      city: 'Florence',
-      days: 1,
-      year: 2004
-    },
-    {
-      city: 'Monaco',
-      days: 1,
-      year: 2004
-    },
-    {
-      city: 'Barcelona',
+      city: 'Barcelona, Spain',
       days: 7,
-      year: 2000
+      year: 2012
     },
     {
       city: 'Valencia, Spain',
       days: 7,
-      year: 2000
-    },
-    {
-      city: 'Santorini',
-      days: 7,
-      year: 2000
+      year: 2012
     },
     {
       city: 'Boulder, CO',
@@ -164,16 +260,16 @@ function drawMarkersMap() {
       days: 3,
       year: 2017,
       img: 'northville.JPG',
-      desc: 'My friends and I hiked the tallest mountain in NY - Mount Marcy.'
+      desc: 'Some of my friends and I hiked the tallest mountain in NY - Mount Marcy.'
     },
     {
-      city: 'Mountainview',
+      city: 'Mountainview, CA',
       days: 3,
       year: 2017,
       img: 'mv.jpg'
     },
     {
-      city: 'San Diego',
+      city: 'San Diego, CA',
       days: 3,
       year: 2017
     },
@@ -185,14 +281,7 @@ function drawMarkersMap() {
       desc: 'My friends and I often go to North Carolina and North Georgia for hiking trips.'
     },
     {
-      city: 'Asheville, NC',
-      days: 10,
-      year: 2016,
-      img: 'nc.jpg',
-      desc: 'My friends and I often go to North Carolina and North Georgia for hiking trips.'
-    },
-    {
-      city: 'Zurich',
+      city: 'Lucerne, Switzerland',
       days: 4,
       year: 2015,
       img: 'zurich.jpg'
@@ -201,54 +290,109 @@ function drawMarkersMap() {
       city: 'Stratton, VT',
       days: 4,
       year: 2017,
-      img: 'stratton.JPG'
+      img: 'stratton.jpg'
+    },
+    {
+      city: 'Orlando, FL',
+      days: 50,
+      year: 1996,
+      img: 'orlando.jpg',
+      desc: "I grew up an hour from Disney World - I get to go there often!"
+    },
+    {
+      city: 'Sebastian, FL',
+      days: 1,
+      year: 2017,
+      img: 'sebastian.jpg',
+      desc: "Ask me about the time I skydived with my grandma."
+    },
+    ,
+    {
+      city: 'Austin, Texas',
+      days: 1,
+      year: 2014,
+      img: 'austin.jpg',
+      desc: 'I used to play ultimate frisbee on UF\'s women\'s team, so I got to travel around the Southeast to compete.'
     }
 
 
   ];
 
+  var advdata = rawdata.map(function(elm){
+
+    // generate a tooltip
+
+    // get the tooltip title
+    var title = "<h5 style=\"width:100px\">";
+    if('years' in elm){
+      // ensure all elements have a days component for sizing
+      title += elm.years;
+      elm.days = 365 * elm.years;
+      title += ' year';
+      title += elm.years == 1 ? "" : "s";
+      title += ' starting in ';
+    } else {
+      title += elm.days;
+      title += ' day';
+      title += elm.days == 1 ? "" : "s";
+      title += ' in ';
+    }
+    title += elm.year + "</h5>";
+
+    // generate the textual parts of the tooltip
+    var textComponents = title;
+    if('desc' in elm){
+      textComponents += "<span>"+elm.desc+"</span>"
+    }
+
+    // create an image tooltip with the textual parts
+    if('img' in elm){
+
+      // generate a table with the discovered width
+      var html = "<table style=\"border: 2px solid white; margin:-10px; width: auto\" class=\"table borderless\">"
+      html += "<tbody><tr>";
+
+      // create a column with the image
+      html += "<td><img style=\"height: 150px; width:auto; max-width: 300; overflow-x:hidden\" src=\"images/"+elm.img+"\"></td>"
+
+      // create a column with the text data
+      html += "<td style=\"width:100px;\">"+textComponents+"</td>";
+
+      // close the elements
+      html += "</tr></tbody></table>";
+    } else {
+      // generate the simple tootltip
+      var html = "<div width=100px>" + textComponents + "</div>";
+    }
+
+    // generate the size factor for the element
+    var sizeFactor = (elm.days > 120) ? 120 : elm.days;
+
+    // return API-friendly array
+    return [elm.city, elm.year, sizeFactor, html];
+
+  })
+  // sort by year so that it populates the map in chronological order
+  .sort(function(a,b){
+    return a[1] - b[1];
+  });
+
+  // pop that pesky sort-undefined
+  advdata.pop();
+
+  // initialize the data table
   var data = new google.visualization.DataTable();
   data.addColumn('string','City');
   data.addColumn('number', 'Year Visited');
   data.addColumn('number','Duration of Stay');
   data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
-
-  var advdata = rawdata.map(function(elm){
-    return [elm.city,elm.year,elm.days, makeToolTip(elm)];
-  });
-
-  function makeToolTip(elm){
-    var title = "<h5 style=\"text-align:center; min-width:100px\">" + elm.days;
-    title += ('inYears' in elm) ? " year" : " day";
-    title += elm.days == 1 ? "" : "s";
-    title += ('inYears' in elm) ? " starting in " : " in ";
-    title += elm.year + "</h5>";
-    if('img' in elm){
-      var html = "<table style=\"border: 2px solid white; margin:-10px; margin-right:-20px\" class=\"table borderless\" ><tbody style=\"border: 0px;\"><tr>";
-      html += "<td><img style=\"height: 200px; width:auto;\" src=\"images/"+elm.img+"\"></td>"
-      html += "<td style=\"max-width:150px;\">"+title;
-      if('desc' in elm){
-        html += "<span style=\"\">"+elm.desc+"</span>";
-      }
-        html += "</td></tr></tbody></table>";
-    } else {
-      var html = "<div>" + title;
-      if('desc' in elm){
-        html += "<span style=\"\">"+elm.desc+"</span>"
-      } else {
-        html += "<span style=\"min-width:200px; padding:0px\"></span>"
-      }
-      html += "</div>"
-    }
-    return html;
-  }
-
-  data.addRows(advdata);
+  // add the rows into the dataset
+  data.addRows(advdata/*[advdata[0], advdata[1]]*/);
 
 
   var options = {
     displayMode: 'markers',
-    colorAxis: {colors: ['yellow', 'blue']},
+    colorAxis: {colors: ['orange', 'blue']},
     tooltip : {
       isHtml: true,
       trigger:'focus'
