@@ -192,7 +192,8 @@ function drawMarkersMap() {
     {
       city: 'Victoria, British Columbia',
       days: 1,
-      year: 2014
+      year: 2014,
+      img: 'victoria.JPG'
     },
     {
       city: 'Juneau, Alaska',
